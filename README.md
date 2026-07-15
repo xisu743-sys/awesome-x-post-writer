@@ -1,8 +1,6 @@
 # awesome-x-post-writer
 
-一个 Claude Code Skill，教 AI（也教人）按我们验证过的方法写 X（Twitter）发帖和回复文案。
-
-写 X 内容最大的问题不是没话说，是写出来一股 AI 味：emoji 满天飞、句句工整、结尾总结升华、开头 "Great point"。这份 skill 把我们从多个高互动账号实测提炼出来的语气规则、结构模板、思考步骤和自查清单整理成一份文件，写之前照着想，写完照着查。
+一个 用来写 x post 和 reply 的 Skill
 
 ## 覆盖范围
 
