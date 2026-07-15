@@ -20,13 +20,21 @@
 
 ## 安装
 
-把这个仓库直接 clone 成 Claude Code 的 skill 文件夹：
+把下面这段直接复制发给你的 agent（Claude Code / Codex 都行），它会自己装好：
+
+```
+帮我安装这个 Claude Code skill：
+git clone https://github.com/braxtonROSE4/awesome-x-post-writer.git ~/.claude/skills/x-writer
+装完确认 ~/.claude/skills/x-writer/SKILL.md 存在，然后告诉我装好了。
+```
+
+装完重启 Claude Code 会话即可生效。
+
+也可以自己手动装，就一条命令：
 
 ```bash
 git clone https://github.com/braxtonROSE4/awesome-x-post-writer.git ~/.claude/skills/x-writer
 ```
-
-装完重启 Claude Code 会话即可生效。
 
 ## 使用
 
