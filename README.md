@@ -34,14 +34,14 @@ references/ego-lite-examples.md
 
 ```text
 帮我安装这个 skill：
-git clone https://github.com/braxtonROSE4/awesome-x-post-writer.git ~/.claude/skills/x-writer
+git clone https://github.com/xisu743-sys/awesome-x-post-writer.git ~/.claude/skills/x-writer
 装完确认 ~/.claude/skills/x-writer/SKILL.md 存在，然后告诉我装好了。
 ```
 
 也可以手动安装：
 
 ```bash
-git clone https://github.com/braxtonROSE4/awesome-x-post-writer.git ~/.claude/skills/x-writer
+git clone https://github.com/xisu743-sys/awesome-x-post-writer.git ~/.claude/skills/x-writer
 ```
 
 ## 使用
