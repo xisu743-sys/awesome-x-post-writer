@@ -1,34 +1,44 @@
 # awesome-x-post-writer
 
-一个 用来写 x post 和 reply 的 Skill
+一个用来写 X post 和 reply 的 Skill。
 
 ## 覆盖范围
 
 | 场景 | 内容 |
-|------|------|
-| 原创发帖（post） | 8 个切入角度模板（数字冲击、反直觉、宣言、hot take、对比、工程细节、推论、punchline），每个角度写明何时不适用；6 步写作流程 |
-| 回复他人推文（reply） | 关系矩阵：先判断原帖作者是谁、什么调性，再决定用哪种 voice；认真回之前先过 5 个自检问题 |
-| 个人号 voice | 通用方法论，不锁定任何具体账号。先翻自己最近 20-30 条已发帖子定位自己的风格，再套通用规则 |
-| ego lite 官方号 voice | 具体规则：禁第一人称、产品名可自报、痛点场景开场加 agent 接管的结构，附实际发布过的范本文案 |
+|---|---|
+| 原创发帖 | 8 个切入角度：数字冲击、反直觉、宣言、hot take、对比、工程细节、推论、punchline |
+| 回复他人推文 | 先判断原帖关系、语境和回复任务，再选择表达方式 |
+| 个人号 voice | 以账号真实历史为准，匹配大小写、标点、emoji、长度和正式程度 |
+| ego lite 官方号 | 5 种场景模式、品牌事实红线、写作流程，以及带语境说明的真实正例 |
 
-另外还有两套通用防线：
+新版不再把“短”理解为所有场景都必须短。核心原则是：**没有多余的话，但该介绍产品或解释技术时要说完整。**
 
-- **语气红线**：8 类禁用的 AI 味短语（每类附为什么是 AI 味）、6 种结构性 AI 味（不是用词问题，是骨架问题）、全文禁 emoji / hashtag / em-dash
-- **英文小毛病自查**：动词及物性、时态、平台地道用语（X 的输入框叫 compose box 不叫 input frame）这类翻译腔陷阱
+## 文件
+
+```text
+SKILL.md
+└── 通用路由、写作方法和检查规则
+
+references/ego-lite-official.md
+└── ego lite 官方账号 persona、场景模式和决策流程
+
+references/ego-lite-examples.md
+└── 已发布正例及其适用语境
+```
+
+处理 ego lite 官方账号文案时，agent 必须读取两个 reference 文件。其他账号只需使用 `SKILL.md`，避免加载无关品牌上下文。
 
 ## 安装
 
-把下面这段直接复制发给你的 agent（Claude Code / Codex 都行），它会自己装好：
+把下面这段直接发给 Claude Code 或 Codex：
 
-```
-帮我安装这个 Claude Code skill：
+```text
+帮我安装这个 skill：
 git clone https://github.com/braxtonROSE4/awesome-x-post-writer.git ~/.claude/skills/x-writer
 装完确认 ~/.claude/skills/x-writer/SKILL.md 存在，然后告诉我装好了。
 ```
 
-装完重启 Claude Code 会话即可生效。
-
-也可以自己手动装，就一条命令：
+也可以手动安装：
 
 ```bash
 git clone https://github.com/braxtonROSE4/awesome-x-post-writer.git ~/.claude/skills/x-writer
@@ -36,15 +46,8 @@ git clone https://github.com/braxtonROSE4/awesome-x-post-writer.git ~/.claude/sk
 
 ## 使用
 
-在 Claude Code 里直接说需求就会触发，比如：
-
-- "帮我写条推文，内容是……"
-- "这条 tweet 我想回复一下，帮我写"
-- "给 ego lite 官方号写个视频发布文案"
-- "write a tweet about ..."
-
-也可以不经过 AI，直接打开 [SKILL.md](SKILL.md) 当写作手册用：先分类（哪个账号、发帖还是回复），选角度，写初稿，过红线，跑最后的 checklist。
-
-## 文件说明
-
-整个 skill 就一个文件：`SKILL.md`，自包含，写推文需要的全部规则都在里面，不依赖任何脚本、外部文档或其他工具。
+- “帮我写条推文，内容是……”
+- “这条 tweet 我想回复一下”
+- “给 ego lite 官方号写个视频发布文案”
+- “用 ego lite 官方账号回复这个 roadmap 问题”
+- “write a reply to this product question”
